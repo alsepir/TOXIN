@@ -1,21 +1,26 @@
 const path = require('path');
+const fs = require('fs');
 const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 // Переменное окружение - дев/прод в node.js
 const NODE_ENV = process.env.NODE_ENV || 'development';
 
+const PATHS = {
+  src: path.join(__dirname, 'src')
+}
+
 // Pages const  for HtmlWebpackPlugin
 //const PAGES_DIR = `${PATHS.src}/pug/pages/`;
 //const PAGES = fs.readdirSync(PAGES_DIR).filter(fileName => fileName.endsWith('.pug'));
 
 module.exports = {
+  externals: {
+    paths: PATHS
+  },
   mode: 'development',
-  // исключить дублирование директории вводом перемнной контекста
-  context:  path.resolve(__dirname, 'common'),
   entry: {
-    home: './home',
-    about: './about'
+    app: PATHS.src
   },
   output: {
     path: path.resolve(__dirname, 'dist'),
