@@ -6,6 +6,6 @@ function component() {
   return element;
 }
 
-for(let i = 0; i < 7; i++) {
-  document.body.appendChild(component());
-}
+// for(let i = 0; i < 7; i++) {
+//   document.body.appendChild(component());
+// }

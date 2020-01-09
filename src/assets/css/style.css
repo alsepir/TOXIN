@@ -1,5 +1,16 @@
-p {
-  color: red;
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  position: relative;
+  top: 50px;
+  left: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin-bottom: 20px;
 }
 
 .square {
@@ -7,5 +18,15 @@ p {
   height: 70px;
   background: #1F2041;
   border-radius: 6px;
-  margin-bottom: 20px;
+}
+
+.text {
+  width: 159px;
+  height: 57px;
+  margin-left: 40px;
+  font-family: Quicksand;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 19px;
+  line-height: 29px;
 }
