@@ -24,7 +24,7 @@ module.exports = {
   },
   output: {
     path: path.resolve(__dirname, 'dist'),
-    filename: "[name].js",
+    filename: "[name].bundle.js",
     library: "[name]"
   },
   optimization: {
@@ -43,17 +43,6 @@ module.exports = {
     aggregateTimeout: 100
   },
 
-  plugins: [
-    new webpack.DefinePlugin({
-      NODE_ENV: JSON.stringify(NODE_ENV), // use 'development' unless process.env.NODE_ENV is defined
-      DEBUG: false
-    }),
-    new HtmlWebpackPlugin({
-      filename: "index.html",
-      template: './src/page/index.pug'
-    })
-  ],
-
   module: {
     rules: [
       {
@@ -69,7 +58,25 @@ module.exports = {
       {
         test: /\.pug$/,
         loader: 'pug-loader'
-      }
+      },
+      {
+        test: /\.css$/,
+        use: [
+          'style-loader',
+          'css-loader',
+        ],
+      },
     ]
-  }
+  },
+
+  plugins: [
+    new webpack.DefinePlugin({
+      NODE_ENV: JSON.stringify(NODE_ENV), // use 'development' unless process.env.NODE_ENV is defined
+      DEBUG: false
+    }),
+    new HtmlWebpackPlugin({
+      filename: "index.html",
+      template: './src/page/index.pug'
+    })
+  ]
 }
