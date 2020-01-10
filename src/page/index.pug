@@ -3,16 +3,23 @@ html(lang="en")
   head
     title HelloWorld
   body
-    .colors-and-type
-      .container
+    .colors-and-type.UIkit-page
+      mixin list(color, description)
+        li.color= description
+      
+      ul.colors-list
+        +list(black, 'cat')
+        +list(darck, 'dog')
+        +list(green, 'pig')     
+
         .square
         .text Dark Shade 100% #1F2041
 
-      .container
+      .colors
         .square
         .text Dark Shade 100% #1F2041
 
-      .container
+      .colors
         .square
         .text Dark Shade 100% #1F2041
     
