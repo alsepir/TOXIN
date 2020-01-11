@@ -1,4 +1,6 @@
 $body-color: rgb(209, 209, 209);
+$square-color: #1F2041;
+$square-color1: opacify($square-color, 0.75);
 
 body {
   background-color: $body-color;
@@ -8,12 +10,16 @@ body {
 
 .UIkit-page {
   margin: 30px auto 0 auto;
-
 }
 
 .colors-and-type {
   position: relative;
-  width: 1440px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-content: space-around;
+  justify-content: center;
+  max-width: 1440px;
   height: 900px;
   background-color: white;
   &::before {
@@ -23,9 +29,61 @@ body {
   }
 }
 
-.colors {
+.colors-list {
+  margin: 0;
+  padding: 0;
+}
+
+.colors-list__item {
+  min-width: 320px;
+  list-style: none;
   display: flex;
   align-items: center;
   justify-content: flex-start;
+  font-size: 19px;
+  line-height: 29px;
+  font-style: normal;
+  font-weight: bold;
   margin-bottom: 20px;
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.colors-list__square {
+  width: 70px;
+  height: 70px;
+  border-radius: 6px; 
+}
+
+.colors-list__square_tone_dark100 {
+  background: $square-color;
+}
+
+.colors-list__square_tone_dark75 {
+  background: rgba($square-color, 0.75);
+}
+
+.colors-list__square_tone_dark50 {
+  background: rgba($square-color, 0.50);
+}
+
+.colors-list__square_tone_dark25 {
+  background: rgba($square-color, 0.25);
+}
+
+.colors-list__square_tone_dark5 {
+  background: rgba($square-color, 0.05);
+}
+
+.colors-list__square_tone_purple {
+  background: #BC9CFF;
+}
+
+.colors-list__square_tone_green {
+  background: #6FCF97;
+}
+
+.colors-list__text {
+  margin-left: 40px;
 }

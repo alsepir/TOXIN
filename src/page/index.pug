@@ -4,22 +4,33 @@ html(lang="en")
     title HelloWorld
   body
     .colors-and-type.UIkit-page
-      mixin list(color, description)
-        li.color= description
-      
+
+      mixin list-item(tone, colorName, colorHex)
+        li.colors-list__item
+          .colors-list__square(class=tone)
+          .colors-list__text!= colorName + '<br>' + colorHex
+
       ul.colors-list
-        +list(black, 'cat')
-        +list(darck, 'dog')
-        +list(green, 'pig')     
+        +list-item('colors-list__square_tone_dark100','Dark Shade 100%', '#1F2041')
+        +list-item('colors-list__square_tone_dark75','Dark Shade 75%', '#1F2041')
+        +list-item('colors-list__square_tone_dark50','Dark Shade 50%', '#1F2041')
+        +list-item('colors-list__square_tone_dark25','Dark Shade 25%', '#1F2041')
+        +list-item('colors-list__square_tone_dark5','Dark Shade 5%', '#1F2041')
+        +list-item('colors-list__square_tone_purple','Purple', '#BC9CFF')
+        +list-item('colors-list__square_tone_green','Green', '#6FCF97')
 
-        .square
-        .text Dark Shade 100% #1F2041
+      ul.colors-list
+        li.colors-list__item 
+          .colors-list__square
+          .colors-list__text This one is the sub-section or widget title
+        li.colors-list__item 
+          .colors-list__square
+          .colors-list__text Next one is the item title inside widgets
+        li.colors-list__item
+          .colors-list__square
+          .colors-list__text This is a label or CTA text
+        li.colors-list__item
+          .colors-list__square
+          .colors-list__text This is the body text which is used for<br> most of the design, like paragraphs, lists, etc.
 
-      .colors
-        .square
-        .text Dark Shade 100% #1F2041
-
-      .colors
-        .square
-        .text Dark Shade 100% #1F2041
-    
+  
