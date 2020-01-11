@@ -1,4 +1,4 @@
-$body-color: rgb(209, 209, 209);
+$body-color: rgb(224, 224, 224);
 $square-color: #1F2041;
 $square-color1: opacify($square-color, 0.75);
 
@@ -9,21 +9,34 @@ body {
 }
 
 .UIkit-page {
+  position: relative;
+  max-width: 1440px;
   margin: 30px auto 0 auto;
 }
 
-.colors-and-type {
-  position: relative;
+.flexible {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
   align-content: space-around;
   justify-content: center;
-  max-width: 1440px;
+}
+
+.colors-and-type {
   height: 900px;
   background-color: white;
   &::before {
     content: 'Colors & type';
+    position: absolute;
+    top: -20px;
+  }
+}
+
+.form-elements {
+  height: 1853px;
+  background-color: white;
+  &::before {
+    content: 'Form Elements';
     position: absolute;
     top: -20px;
   }
@@ -92,4 +105,13 @@ body {
 
 .colors-list__text {
   margin-left: 40px;
+}
+
+
+.input {
+  width: 320px;
+  height: 44px;
+  border: 1px solid rgba(31, 32, 65, 0.25);
+  box-sizing: border-box;
+  border-radius: 4px;
 }

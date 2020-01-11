@@ -3,8 +3,7 @@ html(lang="en")
   head
     title HelloWorld
   body
-    .colors-and-type.UIkit-page
-
+    .colors-and-type.UIkit-page.flexible
       img.logo(src='./src/logo.svg')
 
       mixin list-item(tone, colorName, colorHex)
@@ -34,5 +33,9 @@ html(lang="en")
         li.colors-list__item
           .colors-list__square
           .colors-list__text This is the body text which is used for<br> most of the design, like paragraphs, lists, etc.
+    
+    .form-elements.UIkit-page
+      img.logo(src='./src/logo.svg')
 
+      input(type='text' class='input')
   
