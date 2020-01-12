@@ -1,16 +1,4 @@
-@font-face {
-  font-family: 'Quicksand';
-  src:  url('../../fonts/Quicksand-Regular.ttf') format('truetype');
-  font-weight: normal;
-	font-style: normal;
-}
-
-@font-face {
-  font-family: 'Quicksand';
-  src:  url('../../fonts/Quicksand-Bold.ttf') format('truetype');
-  font-weight: bold;
-	font-style: normal;
-}
+@import "font.scss";
 
 $body-color: rgb(224, 224, 224);
 
