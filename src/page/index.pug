@@ -9,7 +9,7 @@ html(lang="en")
       mixin colors-item(tone, colorName, colorHex)
         li.colors-list__item
           .colors-list__square(class=tone)
-          .colors-list__text!= colorName + '<br>' + colorHex
+          .colors-list__text!= colorName + '<br>' + '<span>'+colorHex+'</span>'
 
       ul.colors-list
         +colors-item('colors-list__square_tone_dark100','Dark Shade 100%', '#1F2041')
@@ -28,7 +28,7 @@ html(lang="en")
       ul.type-list
         +type-item('type-list__text_size_h1', 'H1', 'This one is the sub-section or widget title')
         +type-item('type-list__text_size_h2', 'H2', 'Next one is the item title inside widgets')
-        +type-item('high', 'H3', 'This is a label or CTA text')
+        +type-item('type-list__text_size_h3', 'H3', 'This is a label or CTA text')
         +type-item('type-list__text_size_body', 'Body', 'This is the body text which is used for most of the design, like paragraphs, lists, etc.')
       
 

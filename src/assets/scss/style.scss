@@ -1,20 +1,6 @@
 @import "font.scss";
-
-$body-color: rgb(224, 224, 224);
-
-$dark-100: #1F2041;
-$dark-75: rgba($dark-100, 0.75);
-$dark-50: rgba($dark-100, 0.50);
-$dark-25: rgba($dark-100, 0.25);
-$dark-5: rgba($dark-100, 0.05);
-$purple: #BC9CFF;
-$green: #6FCF97;
-
-body {
-  background-color: $body-color;
-  margin: 0;
-  padding: 0;
-}
+@import "vars.scss";
+@import "default-tags.scss";
 
 .UIkit-page {
   position: relative;
@@ -73,13 +59,15 @@ body {
 }
 
 .type-list__item {
-  min-width: 320px;
   max-width: 403px;
   list-style: none;
   display: flex;
   justify-content: flex-start;
   align-items: flex-start;
   margin-bottom: 50px;
+  &:last-child {
+    margin-bottom: 0;
+  }
 }
 
 .colors-list__square {
@@ -110,8 +98,8 @@ body {
 }
 
 .type-list__square {
-  width: 29px;
-  height: 30px;
+  min-width: 37px;
+  max-height: 30px;
   font-style: normal;
   font-weight: normal;
   text-align: right;
@@ -119,26 +107,31 @@ body {
 
 
 .colors-list__text {
+  font-family: $quicksand;
   font-size: 19px;
   line-height: 29px;
   font-style: normal;
   font-weight: bold;
   margin-left: 40px;
+  span {
+    font-weight: normal;
+  }
 }
 
 .type-list__text {
-  font-family: 'Quicksand', 'Open Sans', 'Arial', sans-serif;
   font-style: normal;
   font-weight: bold;
   margin-left: 30px;
 }
 
 .type-list__text_size_h1 {
+  font-family: $quicksand;
   font-size: 24px;
   line-height: 30px;
 }
 
 .type-list__text_size_h2 {
+  font-family: $quicksand;
   font-size: 19px;
   line-height: 24px;
   max-width: 282px;
@@ -147,13 +140,28 @@ body {
 .type-list__text_size_h3 {
   font-size: 12px;
   line-height: 15px;
+  text-transform: uppercase;
 }
 
 .type-list__text_size_body {
   font-size: 14px;
   line-height: 24px;
   max-width: 301px;
+  font-weight: normal;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 .form-elements {
