@@ -203,3 +203,38 @@ input {
   border: 1px solid $dark-50;
 }
 
+
+.comment {
+  width: 711px;
+  position: relative;
+  color: $dark-75;
+}
+
+.comment__avatar {
+  width: 47px;
+  height: 48px;
+  background: url("../../comment-profile.jpg") no-repeat 50% 25%;
+  position: absolute;
+}
+
+.comment__author,
+.comment__date,
+.comment__text {
+  padding-left: 58px;
+}
+
+.comment__author {
+  font-weight: bold;
+}
+
+.comment__like {
+  position: absolute;
+  top: 60px;
+  left: 4px;
+  width: 40px;
+  height: 20px;
+  background: 
+    url("../../comment-favorite.svg") no-repeat 25% 50%,
+    url("../../comment-count.svg") no-repeat 75% 50%,
+    url("../../comment-rect.svg") no-repeat 50% 50%;
+}

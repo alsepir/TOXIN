@@ -1,6 +1,7 @@
 import './assets/scss/style.scss';
 import Logo from './logo.svg';
 
+
 function component() {
   const element = document.createElement('div');
   element.classList.add('square');

@@ -48,5 +48,15 @@ html(lang="en")
         option(value='value3') Значение 3
 
       label(for='mask') MASKED TEXT FIELD
-      input(type='text' id='mask' placeholder="MM/YY" class="masked" pattern="(1[0-2]|0[1-9])\/(1[5-9]|2\d)")  
+      input(type='text' id='mask' placeholder="MM/YY" class="masked" pattern="(1[0-2]|0[1-9])\/(1[5-9]|2\d)")
+
+      .comment
+        .comment__avatar
+        .comment__author Мурад Сарафанов
+        .comment__date 5 дней назад
+        .comment__text
+          | Великолепный матрас на кровати в основной спальне! 
+          | А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. 
+          | Выкрикивал комплименты повару — никто не жаловался из соседей.
+        a(href='#' title='Оценить' class='comment__like')
   
