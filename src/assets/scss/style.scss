@@ -238,3 +238,23 @@ input {
     url("../../comment-count.svg") no-repeat 75% 50%,
     url("../../comment-rect.svg") no-repeat 50% 50%;
 }
+
+.advantage {
+  position: relative;
+  max-width: 291px;
+}
+
+.advantage__logo {
+  position: absolute;
+  width: 48px;
+  height: 48px;
+}
+
+.advantage__title,
+.advantage__text {
+  padding-left: 58px;
+}
+
+.advantage__title {
+  font-weight: bold;
+}

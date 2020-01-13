@@ -59,4 +59,15 @@ html(lang="en")
           | А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. 
           | Выкрикивал комплименты повару — никто не жаловался из соседей.
         a(href='#' title='Оценить' class='comment__like')
+
+
+      mixin advantage-item(image, head, description)
+        .advantage
+          .advantage__logo
+            img(src=image)
+          .advantage__title= head
+          .advantage__text= description
+      
+      +advantage-item('./src/advantage-emoticon.svg', 'Комфорт', 'Шумопоглощающие стены')
+      +advantage-item('./src/advantage-city.svg', 'Удобство', 'Окно в каждой из спален')
   
