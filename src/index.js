@@ -1,4 +1,3 @@
-import './assets/css/style.css';
 import './assets/scss/style.scss';
 import Logo from './logo.svg';
 

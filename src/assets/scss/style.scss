@@ -174,10 +174,32 @@
   }
 }
 
-.input {
+label {
+  display: block;
+}
+
+input {
   width: 320px;
   height: 44px;
-  border: 1px solid rgba(31, 32, 65, 0.25);
+  background: #FFFFFF;
   box-sizing: border-box;
+  border: 1px solid $dark-25;
   border-radius: 4px;
+  padding: 13px 15px 13px 15px;
+
+  font-family: $montserrat;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 24px;
+  color: $dark-75;
+  &::placeholder {
+    color: $dark-25;
+    line-height: 18px;
+  }
 }
+
+.focus {
+  border: 1px solid $dark-50;
+}
+

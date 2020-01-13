@@ -1,7 +1,7 @@
 doctype html
 html(lang="en")
   head
-    title HelloWorld
+    title UIkit
   body
     .colors-and-type.UIkit-page.flexible
       img.logo(src='./src/logo.svg')
@@ -31,14 +31,22 @@ html(lang="en")
         +type-item('type-list__text_size_h3', 'H3', 'This is a label or CTA text')
         +type-item('type-list__text_size_body', 'Body', 'This is the body text which is used for most of the design, like paragraphs, lists, etc.')
       
-
-
-
+    //- form-elements page ----------------------------------------------------------
     .form-elements.UIkit-page
       img.logo(src='./src/logo.svg')
 
-      input(type='text' class='input')
-      input(type='text' class='input')
-      input(type='text' class='input')
-      input(type='text' class='input')
+      label(for='default') TEXT FIELD
+      input(type='text' id='default' class='default' placeholder='Email')
+
+      label(for='focus') TEXT FIELD
+      input(type='text' id='focus' class='focus' value='This is pretty awesome')
+
+      label(for='dropdown') DROPDOWN
+      select(name='dropdown' id='dropdown' value='Сколько гостей')
+        option(value='value1')
+        option(value='value2' selected) Значение 2
+        option(value='value3') Значение 3
+
+      label(for='mask') MASKED TEXT FIELD
+      input(type='text' id='mask' placeholder="MM/YY" class="masked" pattern="(1[0-2]|0[1-9])\/(1[5-9]|2\d)")  
   
