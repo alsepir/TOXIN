@@ -112,5 +112,9 @@ module.exports = {
       chunkFilename: '[id].css',
       ignoreOrder: false, // Enable to remove warnings about conflicting order
     }),
+    new webpack.ProvidePlugin({
+      $: 'jquery',
+      jQuery: 'jquery'
+    }),
   ]
 }

@@ -1,15 +1,4 @@
-import './assets/scss/style.scss';
-import Logo from './logo.svg';
-import Emotion from './advantage-emoticon.svg';
-import City from './advantage-city.svg';
-
-require('jquery');
-require("jquery-ui/ui/widgets/draggable");
-require("jquery-ui/ui/widgets/dialog");
-
-$(".test").css("background", "yellow");
-
-$(".test").draggable(); // эта строка кода, которая делает элемент перетаскиваемым
+import $ from 'jquery';
 
 // Зададим плагин cDialog, наследуемый от dialog
 $.widget("my.cDialog", $.ui.dialog, {
@@ -43,13 +32,3 @@ $.widget("my.cDialog", $.ui.dialog, {
 
 // установим плагин cDialog на элемент с id = wnd
 $("#wnd").cDialog();
-
-function component() {
-  const element = document.createElement('div');
-  element.classList.add('square');
-  return element;
-}
-
-// for(let i = 0; i < 7; i++) {
-//   document.body.appendChild(component());
-// }
