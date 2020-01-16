@@ -71,5 +71,15 @@ html(lang="en")
       +advantage-item('./src/advantage-emoticon.svg', 'Комфорт', 'Шумопоглощающие стены')
       +advantage-item('./src/advantage-city.svg', 'Удобство', 'Окно в каждой из спален')
 
-      #wnd.test ПРивет
+      span#wnd.test ПРивет
+
+      .dropdown DROPDOWN
+      label(for='speed') Select a speed
+      select(name='speed' id='speed')
+        option Slower
+        option Slow
+        option(selected='selected') Medium
+        option Fast
+        option Faster
+
   
