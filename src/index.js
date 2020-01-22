@@ -11,6 +11,7 @@ import City from './advantage-city.svg';
 // //import 'jquery-ui/themes/base/selectmenu.css';
 import './jquery-plugin.js'
 
+
 $(".test").css("background", "yellow");
 $(".test").datepicker();
 $('#speed').selectmenu();
