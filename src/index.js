@@ -3,22 +3,20 @@ import Logo from './logo.svg';
 import Emotion from './advantage-emoticon.svg';
 import City from './advantage-city.svg';
 
-// require('jquery');
-// //require('jquery-ui/ui/widgets/draggable');
-// require('jquery-ui/ui/widgets/datepicker.js');
-// require('jquery-ui/themes/base/datepicker.css');
-// import 'jquery-ui/ui/widgets/selectmenu.js';
-// //import 'jquery-ui/themes/base/selectmenu.css';
-import './jquery-plugin.js'
+require('jquery');
+//require('jquery-ui/ui/widgets/draggable');
+require('jquery-ui/ui/widgets/datepicker.js');
+require('jquery-ui/themes/base/datepicker.css');
+import 'jquery-ui/ui/widgets/selectmenu.js';
+//import 'jquery-ui/themes/base/selectmenu.css';
+import './jquery-ui.css'
 
 $(".test").css("background", "yellow");
 $(".test").datepicker();
 $('#speed').selectmenu();
-
 $( "#speed" ).selectmenu( "open" );
 let speed = $( "#speed" ).selectmenu( "menuWidget" );
 console.log(speed);
-
 //$(".test").draggable(); // эта строка кода, которая делает элемент перетаскиваемым
 
 // Зададим плагин cDialog, наследуемый от dialog
