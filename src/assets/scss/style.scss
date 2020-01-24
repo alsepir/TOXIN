@@ -275,35 +275,52 @@ input {
 
 .header {
 	display: flex;
+	/* display: grid;
+	grid-template-columns: 3fr 3fr 2fr; */
 	outline: 1px solid grey;
 	justify-content: space-around;
-  align-items: center;
-  height: 70px;
+	align-items: center;
+	height: 70px;
+	max-width: 1440px;
+	margin: auto;
 }
 
-.header__logo {
-  height: 40px;
-  width: 106px;
-  background-image:
-    url('../../Logo-grad.svg');
+.logo {
+	width: 110px;
+	height: 40px;
+	background: url('../../Logo-grad.svg') no-repeat 50% 50%;
+	margin-right: 40px;
+	/* grid-column-start: 1; */
 }
 
-.header__nav-items {
+
+.nav__items {
+	position: relative;
 	list-style: none;
 	padding: 0;
 	margin: 0;
 	display: flex;
 }
 
-.header__login a {
-	display: inline-block;
-	text-decoration: none;
-	border: 2px solid blue;
-	border-radius: 10px;
-	color: black;
-	padding: 5px;
+.nav__items li {
+	margin-right: 20px;
 }
 
+.nav__items-drop {
+	padding-right: 20px;
+}
+
+.nav__items-drop::after {
+	position: absolute;
+	display: inline-block;
+	font-family: 'Material Icons';
+	content: 'expand_more';
+	font-size: 20px;
+}
+
+.nav {
+	/* grid-column-start: 2; */
+}
 
 
 
