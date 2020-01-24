@@ -303,3 +303,42 @@ input {
 	color: black;
 	padding: 5px;
 }
+
+
+
+
+.btn {
+	border: none;
+	padding: 0;
+	border-radius: 20px;
+	background-image: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+	background-clip: content-box;
+}
+
+.btn:focus {
+	outline: none;
+}
+
+.btn:hover {
+	background-image: linear-gradient(180deg, rgba(188, 156, 255, 0.5) 0%, rgba(139, 164, 249, 0.5) 100%);
+}
+
+.btn__text {
+	padding: 10px 30px;
+	border: 2px solid;
+	border-color: transparent;
+	border-radius: 20px;
+	background-clip: padding-box;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.btn_fill_white {
+	color: #BC9CFF;
+	background-color: white;
+}
+
+.btn_fill_color {
+	color: #ffffff;
+	background-color: transparent;
+}
