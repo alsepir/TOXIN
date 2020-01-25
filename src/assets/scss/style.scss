@@ -274,9 +274,9 @@ input {
 }
 
 .header {
-	display: flex;
-	/* display: grid;
-	grid-template-columns: 3fr 3fr 2fr; */
+	/*display: flex;*/
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
 	outline: 1px solid grey;
 	justify-content: space-around;
 	align-items: center;
@@ -290,7 +290,8 @@ input {
 	height: 40px;
 	background: url('../../Logo-grad.svg') no-repeat 50% 50%;
 	margin-right: 40px;
-	/* grid-column-start: 1; */
+  grid-column-start: 2;
+  grid-column-end: 4;
 }
 
 
@@ -319,7 +320,13 @@ input {
 }
 
 .nav {
-	/* grid-column-start: 2; */
+  grid-column-start: 4;
+  grid-column-end: 10;
+}
+
+.header__login {
+  grid-column-start: 10;
+  grid-column-end: 13;
 }
 
 

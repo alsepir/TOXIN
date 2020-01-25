@@ -1,0 +1,140 @@
+doctype html
+html(lang="en")
+  head
+    title UIkit
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
+  body
+    .colors-and-type.UIkit-page.flexible
+      img.logo(src='./src/logo.svg')
+
+      mixin colors-item(tone, colorName, colorHex)
+        li.colors-list__item
+          .colors-list__square(class=tone)
+          .colors-list__text!= colorName + '<br>' + '<span>'+colorHex+'</span>'
+
+      ul.colors-list
+        +colors-item('colors-list__square_tone_dark100','Dark Shade 100%', '#1F2041')
+        +colors-item('colors-list__square_tone_dark75','Dark Shade 75%', '#1F2041')
+        +colors-item('colors-list__square_tone_dark50','Dark Shade 50%', '#1F2041')
+        +colors-item('colors-list__square_tone_dark25','Dark Shade 25%', '#1F2041')
+        +colors-item('colors-list__square_tone_dark5','Dark Shade 5%', '#1F2041')
+        +colors-item('colors-list__square_tone_purple','Purple', '#BC9CFF')
+        +colors-item('colors-list__square_tone_green','Green', '#6FCF97')
+
+      mixin type-item(size, tag, description)
+        li.type-list__item
+          .type-list__square(class=size)= tag
+          .type-list__text(class=size)= description
+
+      ul.type-list
+        +type-item('type-list__text_size_h1', 'H1', 'This one is the sub-section or widget title')
+        +type-item('type-list__text_size_h2', 'H2', 'Next one is the item title inside widgets')
+        +type-item('type-list__text_size_h3', 'H3', 'This is a label or CTA text')
+        +type-item('type-list__text_size_body', 'Body', 'This is the body text which is used for most of the design, like paragraphs, lists, etc.')
+      
+    //- form-elements page ----------------------------------------------------------
+    .form-elements.UIkit-page
+      img.logo(src='./src/logo.svg')
+
+      label(for='default') TEXT FIELD
+      input(type='text' id='default' class='default' placeholder='Email')
+
+      label(for='focus') TEXT FIELD
+      input(type='text' id='focus' class='focus' value='This is pretty awesome')
+
+      label(for='dropdown') DROPDOWN
+      select(name='dropdown' id='dropdown' value='Сколько гостей')
+        option(value='value1')
+        option(value='value2' selected) Значение 2
+        option(value='value3') Значение 3
+
+      label(for='mask') MASKED TEXT FIELD
+      input(type='text' id='mask' placeholder="MM/YY" class="masked" pattern="(1[0-2]|0[1-9])\/(1[5-9]|2\d)")
+
+      .comment
+        .comment__avatar
+        .comment__author Мурад Сарафанов
+        .comment__date 5 дней назад
+        .comment__text
+          | Великолепный матрас на кровати в основной спальне! 
+          | А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. 
+          | Выкрикивал комплименты повару — никто не жаловался из соседей.
+        a(href='#' title='Оценить' class='comment__like')
+
+
+      mixin advantage-item(image, head, description)
+        .advantage
+          .advantage__logo
+            img(src=image)
+          .advantage__title= head
+          .advantage__text= description
+      
+      +advantage-item('./src/advantage-emoticon.svg', 'Комфорт', 'Шумопоглощающие стены')
+      +advantage-item('./src/advantage-city.svg', 'Удобство', 'Окно в каждой из спален')
+
+      span#wnd.test ПРивет
+
+      .dropdown DROPDOWN
+      label(for='speed') Select a speed
+      select(name='speed' id='speed')
+        option Slower
+        option Slow
+        option(selected='selected') Medium
+        option Fast
+        option Faster
+
+    //- form-elements page ----------------------------------------------------------
+    .headers-and-footers.UIkit-page
+      header.header
+        .header__logo
+        .header__nav.nav
+          ul.nav__items
+            li Home
+            li About Us
+            li.nav__items-drop Services
+            li Careers
+            li News
+            li Documentation
+        .header__login
+          button(type='button').btn
+            .btn__text.btn_fill_white Login
+          button(type='button').btn
+            .btn__text.btn_fill_color Register
+
+      footer.footer
+        .about
+          .header__logo
+          .description 
+            | Lorem ipsum dolor sit amet consectetur adipiscing elit aliquam eget 
+            | nullam pellentesque aliquam curabitur cociis.
+        .footer__nav.nav
+          h2 Navigation
+          ul.navigation__item.nav-items
+            li About Us
+            li News
+            li Support
+            li Products
+        .footer__nav.nav
+          h2 About Us
+          ul.about-us__items.nav-items
+            li Who we are
+            li Our team
+            li Careers
+            li Investors
+        .footer__nav.nav
+          h2 Support
+          ul.support__items.nav-items
+            li Documentation
+            li Community
+            li Get in Touch
+        .subscribe
+          h2 Subscribe to our newsletter
+          p Receive our latest news and promotions in your inbox!
+          input(type='text' name='email')
+        .copyright
+          .copyright__text Copyright © 2018 Toxin UI Kit. All rights reserved.
+          .social-bar
+            a(href='#') twitter
+            a(href='#') facebook
+            a(href='#') instagram
+            

@@ -3,6 +3,7 @@ const fs = require('fs');
 const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
 // Переменное окружение - дев/прод в node.js
 const NODE_ENV = process.env.NODE_ENV || 'development';
@@ -21,7 +22,8 @@ module.exports = {
   },
   mode: 'development',
   entry: {
-    app: PATHS.src
+    index: './src/index.js',          //app: PATHS.src
+    ui_kit: './src/ui-kit.js'
   },
   output: {
     path: path.resolve(__dirname, 'dist'),
@@ -97,6 +99,7 @@ module.exports = {
   },
 
   plugins: [
+    new CleanWebpackPlugin(),
     new webpack.DefinePlugin({
       NODE_ENV: JSON.stringify(NODE_ENV), // use 'development' unless process.env.NODE_ENV is defined
       DEBUG: false
@@ -104,6 +107,10 @@ module.exports = {
     new HtmlWebpackPlugin({
       filename: "index.html",
       template: './src/page/index.pug'
+    }),
+    new HtmlWebpackPlugin({
+      filename: "ui-kit.html",
+      template: './src/page/ui-kit.pug'
     }),
     new MiniCssExtractPlugin({
       // Options similar to the same options in webpackOptions.output
