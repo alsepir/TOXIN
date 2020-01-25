@@ -314,9 +314,12 @@ input {
 
 .content {
   display: grid;
-	grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-  background: url('../../image-3.png') no-repeat 50% 100%;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 830px;
+  background-image: url('../../image-3.png');
+  background-position: 50% 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
   margin: 0 auto;
-  height: 830px;
-  width: 1440px;
+  max-width: 1440px;
 }

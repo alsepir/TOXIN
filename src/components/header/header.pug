@@ -1,15 +1,20 @@
 //- header block
 header.header
   .header__logo
-  .header__nav.nav
-    ul.nav__items
-      li Home
-      li About Us
-      li.nav__items-drop Services
-      li Careers
-      li News
-      li 
-        a(href='ui-kit.html') Documentation
+
+  mixin nav-item(drop, item)
+    li.nav__item(class= drop)
+      a(href='ui-kit.html')= item
+  
+  block nav
+    .header__nav.nav
+      ul.nav__items
+        +nav-item('', 'О нас')
+        +nav-item('nav__items-drop', 'Услуги')
+        +nav-item('', 'Вакансии')
+        +nav-item('', 'Новости')
+        +nav-item('nav__items-drop', 'Соглашения')
+
   .header__login
     button(type='button').btn
       .btn__text.btn_fill_white Login
