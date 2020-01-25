@@ -106,11 +106,11 @@ module.exports = {
     }),
     new HtmlWebpackPlugin({
       filename: "index.html",
-      template: './src/page/index.pug'
+      template: './src/pages/index.pug'
     }),
     new HtmlWebpackPlugin({
       filename: "ui-kit.html",
-      template: './src/page/ui-kit.pug'
+      template: './src/pages/ui-kit.pug'
     }),
     new MiniCssExtractPlugin({
       // Options similar to the same options in webpackOptions.output
