@@ -1,61 +1,11 @@
+doctype html
 html(lang="en")
   head
     title Landing page
     meta(name="viewport" content="width=device-width, initial-scale=1.0")
   body
     //- form-elements page ----------------------------------------------------------
-    .headers-and-footers.UIkit-page
-      header.header
-        .header__logo
-        .header__nav.nav
-          ul.nav__items
-            li Home
-            li About Us
-            li.nav__items-drop Services
-            li Careers
-            li News
-            li 
-              a(href='ui-kit.html') Documentation
-        .header__login
-          button(type='button').btn
-            .btn__text.btn_fill_white Login
-          button(type='button').btn
-            .btn__text.btn_fill_color Register
-
-      footer.footer
-        .about
-          .header__logo
-          .description 
-            | Lorem ipsum dolor sit amet consectetur adipiscing elit aliquam eget 
-            | nullam pellentesque aliquam curabitur cociis.
-        .footer__nav.nav
-          h2 Navigation
-          ul.navigation__item.nav-items
-            li About Us
-            li News
-            li Support
-            li Products
-        .footer__nav.nav
-          h2 About Us
-          ul.about-us__items.nav-items
-            li Who we are
-            li Our team
-            li Careers
-            li Investors
-        .footer__nav.nav
-          h2 Support
-          ul.support__items.nav-items
-            li Documentation
-            li Community
-            li Get in Touch
-        .subscribe
-          h2 Subscribe to our newsletter
-          p Receive our latest news and promotions in your inbox!
-          input(type='text' name='email')
-        .copyright
-          .copyright__text Copyright © 2018 Toxin UI Kit. All rights reserved.
-          .social-bar
-            a(href='#') twitter
-            a(href='#') facebook
-            a(href='#') instagram
+    include ../components/header/header.pug
+    .content
+    include ../components/footer/footer.pug
             

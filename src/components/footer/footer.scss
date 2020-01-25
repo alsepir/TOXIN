@@ -1,0 +1,56 @@
+.footer {
+	display: grid;
+  grid-template-columns: 3.5fr 5fr 3.5fr;
+  grid-template-rows: 100px 172px 100px 70px;
+  grid-template-areas: 
+    ". . ."
+    "a r s"
+    ". . ."
+    "c c c";
+  max-width: 1440px;
+  height: 442px;
+  margin: 0 auto;
+  background-color: white;
+}
+
+.about {
+  max-width: 220px;
+  grid-area: a;
+}
+
+.relation {
+  grid-area: r;
+  display: flex;
+  justify-content: space-around;
+}
+
+.relation__list {
+}
+
+.relation__title {
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.relation__items {
+	list-style: none;
+	padding: 0;
+  margin: 0;
+}
+
+.relation__item {
+  a {
+    text-decoration: none;
+  }
+}
+
+.subscribe {
+  grid-area: s;
+	max-width: 220px;
+}
+
+.copyright {
+  grid-area: c;
+  display: flex;
+  justify-content: space-between;
+}

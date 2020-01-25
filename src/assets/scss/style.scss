@@ -273,62 +273,6 @@ input {
   }
 }
 
-.header {
-	/*display: flex;*/
-	display: grid;
-	grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-	outline: 1px solid grey;
-	justify-content: space-around;
-	align-items: center;
-	height: 70px;
-	max-width: 1440px;
-	margin: auto;
-}
-
-.header__logo {
-	width: 110px;
-	height: 40px;
-	background: url('../../Logo-grad.svg') no-repeat 50% 50%;
-	margin-right: 40px;
-  grid-column-start: 2;
-  grid-column-end: 4;
-}
-
-
-.nav__items {
-	position: relative;
-	list-style: none;
-	padding: 0;
-	margin: 0;
-	display: flex;
-}
-
-.nav__items li {
-	margin-right: 20px;
-}
-
-.nav__items-drop {
-	padding-right: 20px;
-}
-
-.nav__items-drop::after {
-	position: absolute;
-	display: inline-block;
-	font-family: 'Material Icons';
-	content: 'expand_more';
-	font-size: 20px;
-}
-
-.nav {
-  grid-column-start: 4;
-  grid-column-end: 10;
-}
-
-.header__login {
-  grid-column-start: 10;
-  grid-column-end: 13;
-}
-
 
 
 .btn {
@@ -368,36 +312,11 @@ input {
 }
 
 
-
-.header {
-	margin-bottom: 20px;
-}
-
-.footer {
-	outline: 1px solid grey;
-	display: flex;
-	justify-content: space-around;
-	align-items: center;
-  max-width: 1440px;
-  height: 372px;
-	margin: auto;
-	border-bottom: 2px solid grey;
-}
-
-.nav-items {
-	list-style: none;
-	padding: 0;
-	margin: 0;
-}
-
-.footer__nav {
-	align-self: flex-start; 
-}
-
-.about {
-	max-width: 220px;
-}
-
-.subscribe {
-	max-width: 220px;
+.content {
+  display: grid;
+	grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  background: url('../../image-3.png') no-repeat 50% 100%;
+  margin: 0 auto;
+  height: 830px;
+  width: 1440px;
 }
