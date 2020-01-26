@@ -89,3 +89,47 @@
   justify-content: space-between;
   align-items: center;
 }
+
+.social-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 112px;
+  a {
+    display: block;
+    width: 24px;
+    height: 24px;
+    text-align: center;
+    text-decoration: none;
+  }
+}
+
+.icon {
+  font-family: 'Font Awesome 5 Brands';
+  font-style: normal;
+  font-weight: normal;
+  font-size: 24px;
+  color: transparent;
+  background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.twitter {
+  &::after {
+    content: '\f099';
+  }
+}
+
+.facebook {
+  &::after { 
+    content: '\f082';
+  }
+}
+
+.instagram {
+  &::after {
+    content: '\f16d';
+  }
+}
