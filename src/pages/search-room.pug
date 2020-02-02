@@ -1,0 +1,38 @@
+doctype html
+html(lang="en")
+  head
+    title Landing page
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
+  body
+    //- form-elements page ----------------------------------------------------------
+    include ../components/header/header.pug
+        
+    .filter-room
+      .filter-room__filter
+        label(for="come") Даты пребывания в отеле
+        input(id="come")
+
+        label(for="guests") Гости
+        input(id="guests")
+      .filter-room__result
+        h2 Номера, которые мы для вас подобрали
+        .layout-room-box
+          .room-box
+            include ../components/room-frame/room-frame.pug
+          .room-box
+            include ../components/room-frame/room-frame.pug
+          .room-box
+            include ../components/room-frame/room-frame.pug
+          .room-box
+            include ../components/room-frame/room-frame.pug
+          .room-box
+          .room-box
+          .room-box
+          .room-box
+          .room-box
+          .room-box
+          .room-box
+          .room-box
+
+    include ../components/footer/footer.pug
+            

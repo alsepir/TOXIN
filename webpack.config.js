@@ -23,7 +23,8 @@ module.exports = {
   mode: 'development',
   entry: {
     index: './src/index.js',          //app: PATHS.src
-    ui_kit: './src/ui-kit.js'
+    ui_kit: './src/ui-kit.js',
+    search_room: './src/search-room.js'
   },
   output: {
     path: path.resolve(__dirname, 'dist'),
@@ -111,6 +112,10 @@ module.exports = {
     new HtmlWebpackPlugin({
       filename: "ui-kit.html",
       template: './src/pages/ui-kit.pug'
+    }),
+    new HtmlWebpackPlugin({
+      filename: "search-room.html",
+      template: './src/pages/search-room.pug'
     }),
     new MiniCssExtractPlugin({
       // Options similar to the same options in webpackOptions.output
