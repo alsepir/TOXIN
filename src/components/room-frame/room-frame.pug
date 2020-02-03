@@ -1,19 +1,24 @@
 //-.room-frame
-.slideshow
-  .slide
-    img(src='./src/components/room-frame/image-min.png')
-  .slide
-    img(src='./src/components/room-frame/image-2.png')
-  .slide
-    img(src='./src/components/room-frame/image-3.png')
+mixin slideshow(images)
+  .slideshow
+    each path_image in images
+      .slide
+        img(src=path_image)
 
-  .prev
-  .next
+    .prev
+    .next
 
-  .dot-container
-    span.dot
-    span.dot
-    span.dot
-    span.dot
+    .dot-container
+      span.dot
+      span.dot
+      span.dot
+      span.dot
 
-      
+mixin room-frame(options)
+  .room-box
+    +slideshow(options.image)
+  
+    .number № #{options.number}
+    .price #{options.price} в сутки
+    .rating #{options.rating} звезд
+    .reviews #{options.reviews} отзывов
