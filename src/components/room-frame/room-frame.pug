@@ -25,9 +25,15 @@ mixin five-star-rating(countStar)
 mixin room-frame(options)
   .room-box
     +slideshow(options.image)
-  
-    .number № #{options.number}
-    .price #{options.price} в сутки
-    .rating
-      +five-star-rating(options.rating)
-    .reviews #{options.reviews} отзывов
+
+    .frame-wrap  
+      .number 
+        h2 № #{options.number}
+      .price 
+        b #{options.price}&#8381
+        span  в сутки
+      .rating
+        +five-star-rating(options.rating)
+      .reviews
+        b #{options.reviews}
+        span  Отзывов
