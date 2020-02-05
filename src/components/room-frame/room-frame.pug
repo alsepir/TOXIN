@@ -14,11 +14,20 @@ mixin slideshow(images)
       span.dot
       span.dot
 
+mixin five-star-rating(countStar)
+  - for(var x = 0; x < 5; x++)
+    if countStar
+      img(src='src/components/room-frame/star.svg')
+      - countStar--
+    else
+      img(src='src/components/room-frame/star_border.svg')
+
 mixin room-frame(options)
   .room-box
     +slideshow(options.image)
   
     .number № #{options.number}
     .price #{options.price} в сутки
-    .rating #{options.rating} звезд
+    .rating
+      +five-star-rating(options.rating)
     .reviews #{options.reviews} отзывов

@@ -14,6 +14,9 @@ import './components/room-frame/image/666.jpg';
 import './components/room-frame/image/444.jpg';
 import './components/room-frame/image/352.jpg';
 
+import './components/room-frame/star_border.svg';
+import './components/room-frame/star.svg';
+
 import './components/room-frame/room-frame.scss';
 
 import './components/room-frame/slideshow.js';
