@@ -1,4 +1,5 @@
 include ../components/room-frame/room-frame.pug
+include ../components/checkbox-list/checkbox-list.pug
 - 
   var data = [{
     number: 888,
@@ -104,6 +105,8 @@ html(lang="en")
 
         label(for="guests") Гости
         input(id="guests")
+
+        +checkbox-list()
       .filter-room__result
         h2 Номера, которые мы для вас подобрали
         

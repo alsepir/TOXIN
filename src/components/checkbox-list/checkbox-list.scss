@@ -1,0 +1,36 @@
+
+.checkbox-list {
+  list-style: none;
+  position: relative;
+  padding-left: 30px;
+
+  & .item {
+    position: absolute;
+    left: 0;
+    width: 20px;
+    height: 20px;
+    border: 1px solid rgba(31, 32, 65, 0.25);
+    box-sizing: border-box;
+    border-radius: 4px;
+    background: #FFFFFF;
+  }
+
+  & .active {
+    border-color: #BC9CFF;
+    background: url('Vector.svg') no-repeat 50% 45%;
+  }
+
+  & .title {
+    display: block;
+    width: 205px;
+  }
+
+  & .description {
+    width: 230px;
+    font-size: 12px;
+    line-height: 14px;
+    white-space: pre-line;
+  }
+}
+
+

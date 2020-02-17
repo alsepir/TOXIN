@@ -17,6 +17,8 @@ import './components/room-frame/image/352.jpg';
 import './components/room-frame/star_border.svg';
 import './components/room-frame/star.svg';
 
+import './components/checkbox-list/checkbox-list.scss';
 import './components/room-frame/room-frame.scss';
 
 import './components/room-frame/slideshow.js';
+import './components/checkbox-list/checkbox-list.js'
