@@ -1,6 +1,9 @@
+extends base.pug
+
 include ../components/room-frame/room-frame.pug
-include ../components/checkbox-list/checkbox-list.pug
-- 
+include ../components/checkbox-buttons/checkbox-buttons.pug
+
+-
   var data = [{
     number: 888,
     price: 9990,
@@ -88,31 +91,54 @@ include ../components/checkbox-list/checkbox-list.pug
     image: ['./src/components/room-frame/image/352.jpg']
   }]
 
+  var desc = [{
+      title: 'Можно курить',
+      description: '',
+      isActive: false
+    },
+    {
+      title: 'Можно с питомцами',
+      description: '',
+      isActive: true
+    },
+    {
+      title: 'Можно пригласить гостей (до 10 человек)',
+      description: '',
+      isActive: true
+    }]
 
-doctype html
-html(lang="en")
-  head
-    title Landing page
-    meta(name="viewport" content="width=device-width, initial-scale=1.0")
-  body
-    //- form-elements page ----------------------------------------------------------
-    include ../components/header/header.pug
-        
-    .filter-room
-      .filter-room__filter
-        label(for="come") Даты пребывания в отеле
-        input(id="come")
+  var two = [{
+      title: 'Широкий коридор',
+      description: 'Ширина коридоров в номере \n не менее 91 см.',
+      isActive: false
+    },
+    {
+      title: 'Помощник для инвалидов',
+      description: 'На 1 этаже вас встретит специалист \n и проводит до номера.',
+      isActive: false
+    }]
 
-        label(for="guests") Гости
-        input(id="guests")
+block header2
+  include ../components/header/header.pug
 
-        +checkbox-list()
-      .filter-room__result
-        h2 Номера, которые мы для вас подобрали
-        
-        .layout-room-box
-          each room in data
-            +room-frame(room)
- 
-    include ../components/footer/footer.pug
+block content2
+  .filter-room
+    .filter-room__filter
+      label(for="come") Даты пребывания в отеле
+      input(id="come")
+
+      label(for="guests") Гости
+      input(id="guests")
+
+      +checkbox-buttons(desc)
+      +checkbox-buttons(two)
+    .filter-room__result
+      h2 Номера, которые мы для вас подобрали
+      
+      .layout-room-box
+        each room in data
+          +room-frame(room)
+
+block footer2
+  include ../components/footer/footer.pug
             
