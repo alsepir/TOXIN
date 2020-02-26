@@ -20,7 +20,6 @@ module.exports = {
   externals: {
     paths: PATHS
   },
-  mode: 'development',
   entry: {
     index: './src/index.js',          //app: PATHS.src
     ui_kit: './src/ui-kit.js',
@@ -35,16 +34,6 @@ module.exports = {
     splitChunks: {
       chunks: 'all',
     },
-  },
-  devServer: {
-    contentBase: './dist'
-  },
-  
-  devtool: NODE_ENV == 'development' ? 'inline-source-map' : null,
-  
-  watch: NODE_ENV == 'development',
-  watchOptions: {
-    aggregateTimeout: 100
   },
 
   module: {
