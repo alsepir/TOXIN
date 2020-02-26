@@ -1,97 +1,103 @@
+//- base layout HTML
 extends base.pug
 
-include ../components/room-frame/room-frame.pug
-include ../components/checkbox-buttons/checkbox-buttons.pug
 
--
-  var data = [{
-    number: 888,
-    price: 9990,
-    rating: 5,
-    reviews: 145,
-    image: ['./src/components/room-frame/image/888/image-min.png', 
-            './src/components/room-frame/image/888/image-2.png',
-            './src/components/room-frame/image/888/image-3.png']
-  },
-  {
-    number: 840,
-    price: 9900,
-    rating: 4,
-    reviews: 65,
-    image: ['./src/components/room-frame/image/840.jpg']
-  },
-  {
-    number: 980,
-    price: 8500,
-    rating: 3,
-    reviews: 35,
-    image: ['./src/components/room-frame/image/980.jpg']
-  },
-  {
-    number: 856,
-    price: 7300,
-    rating: 5,
-    reviews: 19,
-    image: ['./src/components/room-frame/image/856.jpg']
-  },
-  {
-    number: 740,
-    price: 6000,
-    rating: 4,
-    reviews: 44,
-    image: ['./src/components/room-frame/image/740.jpg']
-  },
-  {
-    number: 982,
-    price: 5800,
-    rating: 3,
-    reviews: 56,
-    image: ['./src/components/room-frame/image/982.jpg']
-  },
-  {
-    number: 678,
-    price: 5500,
-    rating: 5,
-    reviews: 45,
-    image: ['./src/components/room-frame/image/678.jpg']
-  },
-  {
-    number: 450,
-    price: 5300,
-    rating: 4,
-    reviews: 39,
-    image: ['./src/components/room-frame/image/450.jpg']
-  },
-  {
-    number: 350,
-    price: 5000,
-    rating: 3,
-    reviews: 77,
-    image: ['./src/components/room-frame/image/350.jpg']
-  },
-  {
-    number: 666,
-    price: 5000,
-    rating: 5,
-    reviews: 25,
-    image: ['./src/components/room-frame/image/666.jpg']
-  },
-  {
-    number: 444,
-    price: 5000,
-    rating: 3,
-    reviews: 15,
-    image: ['./src/components/room-frame/image/444.jpg']
-  },
-  {
-    number: 352,
-    price: 5000,
-    rating: 3,
-    reviews: 55,
-    image: ['./src/components/room-frame/image/352.jpg']
-  }]
+block header
+  include ../components/header/header.pug
 
-  var desc = [{
+block content
+  include ../components/room-frame/room-frame.pug
+  include ../components/checkbox-buttons/checkbox-buttons.pug
+  
+  -
+    var data_room = [{
+      number: 888,
+      price: 9990,
+      rating: 5,
+      reviews: 145,
+      image: ['./src/components/room-frame/image/888/image-min.png', 
+              './src/components/room-frame/image/888/image-2.png',
+              './src/components/room-frame/image/888/image-3.png']
+    },
+    {
+      number: 840,
+      price: 9900,
+      rating: 4,
+      reviews: 65,
+      image: ['./src/components/room-frame/image/840.jpg']
+    },
+    {
+      number: 980,
+      price: 8500,
+      rating: 3,
+      reviews: 35,
+      image: ['./src/components/room-frame/image/980.jpg']
+    },
+    {
+      number: 856,
+      price: 7300,
+      rating: 5,
+      reviews: 19,
+      image: ['./src/components/room-frame/image/856.jpg']
+    },
+    {
+      number: 740,
+      price: 6000,
+      rating: 4,
+      reviews: 44,
+      image: ['./src/components/room-frame/image/740.jpg']
+    },
+    {
+      number: 982,
+      price: 5800,
+      rating: 3,
+      reviews: 56,
+      image: ['./src/components/room-frame/image/982.jpg']
+    },
+    {
+      number: 678,
+      price: 5500,
+      rating: 5,
+      reviews: 45,
+      image: ['./src/components/room-frame/image/678.jpg']
+    },
+    {
+      number: 450,
+      price: 5300,
+      rating: 4,
+      reviews: 39,
+      image: ['./src/components/room-frame/image/450.jpg']
+    },
+    {
+      number: 350,
+      price: 5000,
+      rating: 3,
+      reviews: 77,
+      image: ['./src/components/room-frame/image/350.jpg']
+    },
+    {
+      number: 666,
+      price: 5000,
+      rating: 5,
+      reviews: 25,
+      image: ['./src/components/room-frame/image/666.jpg']
+    },
+    {
+      number: 444,
+      price: 5000,
+      rating: 3,
+      reviews: 15,
+      image: ['./src/components/room-frame/image/444.jpg']
+    },
+    {
+      number: 352,
+      price: 5000,
+      rating: 3,
+      reviews: 55,
+      image: ['./src/components/room-frame/image/352.jpg']
+    }]
+
+    var data_opportunities = [{
       title: 'Можно курить',
       description: '',
       isActive: false
@@ -106,8 +112,8 @@ include ../components/checkbox-buttons/checkbox-buttons.pug
       description: '',
       isActive: true
     }]
-
-  var two = [{
+  
+    var data_properties = [{
       title: 'Широкий коридор',
       description: 'Ширина коридоров в номере \n не менее 91 см.',
       isActive: false
@@ -118,10 +124,6 @@ include ../components/checkbox-buttons/checkbox-buttons.pug
       isActive: false
     }]
 
-block header2
-  include ../components/header/header.pug
-
-block content2
   .filter-room
     .filter-room__filter
       label(for="come") Даты пребывания в отеле
@@ -130,15 +132,15 @@ block content2
       label(for="guests") Гости
       input(id="guests")
 
-      +checkbox-buttons(desc)
-      +checkbox-buttons(two)
+      +checkbox-buttons(data_opportunities)
+      +checkbox-buttons(data_properties)
     .filter-room__result
       h2 Номера, которые мы для вас подобрали
       
       .layout-room-box
-        each room in data
+        each room in data_room
           +room-frame(room)
 
-block footer2
+block footer
   include ../components/footer/footer.pug
             

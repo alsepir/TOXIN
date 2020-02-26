@@ -1,32 +1,30 @@
-doctype html
-html(lang="en")
-  head
-    title Landing page
-    meta(name="viewport" content="width=device-width, initial-scale=1.0")
-    //- script(src="https://kit.fontawesome.com/5668038b6c.js" crossorigin="anonymous")
-  body
-    //- form-elements page ----------------------------------------------------------
-    include ../components/header/header.pug
+//- base layout HTML
+extends base.pug
+
+block header
+  include ../components/header/header.pug
     
-    .content
-      form(action="/search-room.html" method="get" class="search-rooms-form")
-        h2.form-title Найдем номера под ваши пожелания
-        
-        .full-form-1
-          .half-form
-            label(for="coming" class='drop-icon') Прибытие
-            input(id="coming" type="text" name="date of coming")
+block content
+  .content
+    form(action="/search-room.html" method="get" class="search-rooms-form")
+      h2.form-title Найдем номера под ваши пожелания
+      
+      .full-form-1
+        .half-form
+          label(for="coming" class='drop-icon') Прибытие
+          input(id="coming" type="text" name="date of coming")
 
-          .half-form
-            label(for="leaving" class='drop-icon') Выезд
-            input(id="leaving" type="text" name="date leaving")
-        
-        .full-form
-          label(for="guests" class='drop-icon') Гости
-          input(id="guests" type="text" name="guests count")
+        .half-form
+          label(for="leaving" class='drop-icon') Выезд
+          input(id="leaving" type="text" name="date leaving")
+      
+      .full-form
+        label(for="guests" class='drop-icon') Гости
+        input(id="guests" type="text" name="guests count")
 
-        button(type="submit" class="btn")
-          div(class="btn__text btn_fill_color") Подобрать номер
-        
-    include ../components/footer/footer.pug
+      button(type="submit" class="btn")
+        div(class="btn__text btn_fill_color") Подобрать номер
+
+block footer
+  include ../components/footer/footer.pug
             
