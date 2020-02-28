@@ -2,5 +2,6 @@
 node_modules
 
 # Dist & test
+dist
 
 package-lock.json

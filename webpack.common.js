@@ -26,7 +26,7 @@ module.exports = {
     search_room: './src/search-room.js'
   },
   output: {
-    path: path.resolve(__dirname, 'docs'),
+    path: path.resolve(__dirname, 'dist'),
     filename: "[name].bundle.js",
     library: "[name]"
   },
