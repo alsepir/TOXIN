@@ -7,19 +7,61 @@ html(lang="en")
     .colors-and-type.UIkit-page.flexible
       img.logo(src='./src/logo.svg')
 
-      mixin colors-item(tone, colorName, colorHex)
-        li.colors-list__item
-          .colors-list__square(class=tone)
-          .colors-list__text!= colorName + '<br>' + '<span>'+colorHex+'</span>'
 
-      ul.colors-list
-        +colors-item('colors-list__square_tone_dark100','Dark Shade 100%', '#1F2041')
-        +colors-item('colors-list__square_tone_dark75','Dark Shade 75%', '#1F2041')
-        +colors-item('colors-list__square_tone_dark50','Dark Shade 50%', '#1F2041')
-        +colors-item('colors-list__square_tone_dark25','Dark Shade 25%', '#1F2041')
-        +colors-item('colors-list__square_tone_dark5','Dark Shade 5%', '#1F2041')
-        +colors-item('colors-list__square_tone_purple','Purple', '#BC9CFF')
-        +colors-item('colors-list__square_tone_green','Green', '#6FCF97')
+      -
+        var color_data = [{
+          box: {
+            modifier: 'color_dark100',
+          },
+          title: 'Dark Shade 100%',
+          description: '#1F2041'
+        },
+        {
+          box: {
+            modifier: 'color_dark75',
+          },
+          title: 'Dark Shade 75%',
+          description: '#1F2041'
+        },
+        {
+          box: {
+            modifier: 'color_dark50',
+          },
+          title: 'Dark Shade 50%',
+          description: '#1F2041'
+        },
+        {
+          box: {
+            modifier: 'color_dark25',
+          },
+          title: 'Dark Shade 25%',
+          description: '#1F2041'
+        },
+        {
+          box: {
+            modifier: 'color_dark5',
+          },
+          title: 'Dark Shade 5%',
+          description: '#1F2041'
+        },
+        {
+          box: {
+            modifier: 'color_purple',
+          },
+          title: 'Purple',
+          description: '#BC9CFF'
+        },
+        {
+          box: {
+            modifier: 'color_green',
+          },
+          title: 'Green',
+          description: '#6FCF97'
+        }]
+
+      include ./list-items/list-items.pug
+      .colors-and-type__list
+        +list-items(color_data)
 
       mixin type-item(size, tag, description)
         li.type-list__item

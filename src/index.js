@@ -1,6 +1,8 @@
 //import './assets/scss/style.scss';
 //import './assets/scss/font.scss';
 
+import './assets/page-layout/index.scss';
+
 
 import "./assets/fontawesome/scss/brands.scss";
 import './components/header/header.scss';
