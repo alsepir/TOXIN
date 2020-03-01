@@ -1,131 +1,134 @@
-doctype html
-html(lang="en")
-  head
-    title UIkit
-    meta(name="viewport" content="width=device-width, initial-scale=1.0")
-  body
-    .colors-and-type.UIkit-page.flexible
-      img.logo(src='./src/logo.svg')
+//- base layout HTML
+extends base.pug
 
+block content
+  .colors-and-type.UIkit-page.flexible
+    img.logo(src='./src/logo.svg')
 
-      -
-        var color_data = [{
-          box: {
-            modifier: 'color_dark100',
-          },
-          title: 'Dark Shade 100%',
-          description: '#1F2041'
-        },
-        {
-          box: {
-            modifier: 'color_dark75',
-          },
-          title: 'Dark Shade 75%',
-          description: '#1F2041'
-        },
-        {
-          box: {
-            modifier: 'color_dark50',
-          },
-          title: 'Dark Shade 50%',
-          description: '#1F2041'
-        },
-        {
-          box: {
-            modifier: 'color_dark25',
-          },
-          title: 'Dark Shade 25%',
-          description: '#1F2041'
-        },
-        {
-          box: {
-            modifier: 'color_dark5',
-          },
-          title: 'Dark Shade 5%',
-          description: '#1F2041'
-        },
-        {
-          box: {
-            modifier: 'color_purple',
-          },
-          title: 'Purple',
-          description: '#BC9CFF'
-        },
-        {
-          box: {
-            modifier: 'color_green',
-          },
-          title: 'Green',
-          description: '#6FCF97'
-        }]
+    include ./../components/list-items/list-items.pug
+    //- component list-items view
+    -
+      var data_color = [{
+        modifier: 'color_dark100',
+        title: 'Dark Shade 100%',
+        description: '#1F2041'
+      },
+      {
+        modifier: 'color_dark75',
+        title: 'Dark Shade 75%',
+        description: '#1F2041'
+      },
+      {
+        modifier: 'color_dark50',
+        title: 'Dark Shade 50%',
+        description: '#1F2041'
+      },
+      {
+        modifier: 'color_dark25',
+        title: 'Dark Shade 25%',
+        description: '#1F2041'
+      },
+      {
+        modifier: 'color_dark5',
+        title: 'Dark Shade 5%',
+        description: '#1F2041'
+      },
+      {
+        modifier: 'color_purple',
+        title: 'Purple',
+        description: '#BC9CFF'
+      },
+      {
+        modifier: 'color_green',
+        title: 'Green',
+        description: '#6FCF97'
+      }]
 
-      include ./list-items/list-items.pug
-      .colors-and-type__list
-        +list-items(color_data)
+    .colors-and-type__list
+      +list-items(data_color)
 
-      mixin type-item(size, tag, description)
-        li.type-list__item
-          .type-list__square(class=size)= tag
-          .type-list__text(class=size)= description
+    //- component font-list view
+    -
+      var data_font = [{
+        tag: 'H1',
+        aside: 'This one is the sub-section or widget title',
+        modifier: 'size_h1'
+      },
+      {
+        tag: 'H2',
+        aside: 'Next one is the item title inside widgets',
+        modifier: 'size_h2'
+      },
+      {
+        tag: 'H3',
+        aside: 'This is a label or CTA text',
+        modifier: 'size_h3'
+      },
+      {
+        tag: 'Body',
+        aside: 'This is the body text which is used for most of the design, like paragraphs, lists, etc.',
+        modifier: 'size_body'
+      }]
 
-      ul.type-list
-        +type-item('type-list__text_size_h1', 'H1', 'This one is the sub-section or widget title')
-        +type-item('type-list__text_size_h2', 'H2', 'Next one is the item title inside widgets')
-        +type-item('type-list__text_size_h3', 'H3', 'This is a label or CTA text')
-        +type-item('type-list__text_size_body', 'Body', 'This is the body text which is used for most of the design, like paragraphs, lists, etc.')
-      
-    //- form-elements page ----------------------------------------------------------
-    .form-elements.UIkit-page
-      img.logo(src='./src/logo.svg')
+    .colors-and-type__font-list
+      +font-list(data_font)
+  
+  //- form-elements page ----------------------------------------------------------
+  .form-elements.UIkit-page
+    img.logo(src='./src/logo.svg')
 
-      label(for='default') TEXT FIELD
-      input(type='text' id='default' class='default' placeholder='Email')
+    label(for='default') TEXT FIELD
+    input(type='text' id='default' class='default' placeholder='Email')
 
-      label(for='focus') TEXT FIELD
-      input(type='text' id='focus' class='focus' value='This is pretty awesome')
+    label(for='focus') TEXT FIELD
+    input(type='text' id='focus' class='focus' value='This is pretty awesome')
 
-      label(for='dropdown') DROPDOWN
-      select(name='dropdown' id='dropdown' value='Сколько гостей')
-        option(value='value1')
-        option(value='value2' selected) Значение 2
-        option(value='value3') Значение 3
+    label(for='dropdown') DROPDOWN
+    select(name='dropdown' id='dropdown' value='Сколько гостей')
+      option(value='value1')
+      option(value='value2' selected) Значение 2
+      option(value='value3') Значение 3
 
-      label(for='mask') MASKED TEXT FIELD
-      input(type='text' id='mask' placeholder="MM/YY" class="masked" pattern="(1[0-2]|0[1-9])\/(1[5-9]|2\d)")
+    label(for='mask') MASKED TEXT FIELD
+    input(type='text' id='mask' placeholder="MM/YY" class="masked" pattern="(1[0-2]|0[1-9])\/(1[5-9]|2\d)")
 
-      .comment
-        .comment__avatar
-        .comment__author Мурад Сарафанов
-        .comment__date 5 дней назад
-        .comment__text
-          | Великолепный матрас на кровати в основной спальне! 
-          | А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. 
-          | Выкрикивал комплименты повару — никто не жаловался из соседей.
-        a(href='#' title='Оценить' class='comment__like')
+    //- component comment view
+    -
+      var data_user = {
+        author: 'Мурад Сарафанов',
+        date: '5 дней назад',
+        text: 'Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей.'
+      }
 
+    include ./../components/comment/comment.pug
+    +comment(data_user)
 
-      mixin advantage-item(image, head, description)
-        .advantage
-          .advantage__logo
-            img(src=image)
-          .advantage__title= head
-          .advantage__text= description
-      
-      +advantage-item('./src/advantage-emoticon.svg', 'Комфорт', 'Шумопоглощающие стены')
-      +advantage-item('./src/advantage-city.svg', 'Удобство', 'Окно в каждой из спален')
+    //- component frame-list view
+    -
+      var data_advantages = [{
+        logo: './src/components/list-items/advantage-emoticon.svg',
+        title: 'Комфорт',
+        description: 'Шумопоглощающие стены'
+      },
+      {
+        logo: './src/components/list-items/advantage-city.svg',
+        title: 'Удобство',
+        description: 'Окно в каждой из спален'
+      }]
 
-      span#wnd.test ПРивет
+    +frame-list(data_advantages)
 
-      .dropdown DROPDOWN
-      label(for='speed') Select a speed
-      select(name='speed' id='speed')
-        option Slower
-        option Slow
-        option(selected='selected') Medium
-        option Fast
-        option Faster
+    //- 
+    .dropdown DROPDOWN
+    label(for='speed') Select a speed
+    select(name='speed' id='speed')
+      option Slower
+      option Slow
+      option(selected='selected') Medium
+      option Fast
+      option Faster
 
-    //- form-elements page ----------------------------------------------------------
-    .headers-and-footers.UIkit-page
-      include ../components/header/header-en.pug
-      include ../components/footer/footer-en.pug
+  //- headers-and-footers page ----------------------------------------------------------
+  .headers-and-footers.UIkit-page
+    include ../components/header/header-en.pug
+    include ../components/footer/footer-en.pug

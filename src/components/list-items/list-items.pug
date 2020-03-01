@@ -1,0 +1,34 @@
+mixin list-items(options)
+  ul.list
+    each option in options
+      li.list__item.list__item_colors
+        
+        if option.modifier
+          .box(class= 'box_' + option.modifier)
+        else
+          .box
+          
+        .paragraph
+          .paragraph__title= option.title
+          .paragraph__description= option.description
+
+
+mixin frame-list(options)
+  ul.frame-list
+    each option in options
+      li.frame-list__item
+        
+        .frame-list__logo
+            img(src= option.logo)
+
+        .frame-list__info
+          .frame-list__title= option.title
+          .frame-list__description= option.description
+
+
+mixin font-list(options)
+  ul.font-list
+    each option in options
+      li.font-list__item
+        .font-list__tag(class= 'font-list__aside_' + option.modifier)= option.tag
+        .font-list__aside(class= 'font-list__aside_' + option.modifier)= option.aside

@@ -1,0 +1,36 @@
+@import "./../../assets/scss/vars.scss";
+
+.comment {
+  width: 711px;
+  position: relative;
+  color: $dark-75;
+
+  &__avatar {
+    width: 47px;
+    height: 48px;
+    background: url("./comment-profile.jpg") no-repeat 50% 25%;
+    position: absolute;
+  }
+
+  &__author,
+  &__date,
+  &__text {
+    padding-left: 58px;
+  }
+
+  &__author {
+    font-weight: bold;
+  }
+  
+  &__like {
+    position: absolute;
+    top: 60px;
+    left: 4px;
+    width: 40px;
+    height: 20px;
+    background: 
+      url("./comment-favorite.svg") no-repeat 25% 50%,
+      url("./comment-count.svg") no-repeat 75% 50%,
+      url("./comment-rect.svg") no-repeat 50% 50%;
+  }
+}

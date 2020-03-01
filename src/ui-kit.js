@@ -1,10 +1,13 @@
 import './assets/scss/style.scss';
+import './assets/page-layout/ui-kit.scss'
 import Logo from './logo.svg';
-import Emotion from './advantage-emoticon.svg';
-import City from './advantage-city.svg';
+import Emotion from './components/list-items/advantage-emoticon.svg';
+import City from './components/list-items/advantage-city.svg';
 import './Logo-grad.svg'
 
-import './pages/list-items/list-items.scss'
+import './components/list-items/list-items.scss'
+
+import './components/comment/comment.scss';
 
 import './jquery-plugin.js'
 

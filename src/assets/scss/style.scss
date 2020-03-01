@@ -2,117 +2,10 @@
 @import "vars.scss";
 @import "default-tags.scss";
 
-.UIkit-page {
-  position: relative;
-  max-width: 1440px;
-  margin: 30px auto 0 auto;
-}
-
-.flexible {
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-}
-
-.colors-and-type {
-  height: 900px;
-  background-color: white;
-  &::before {
-    content: 'Colors & type';
-    position: absolute;
-    top: -20px;
-  }
-}
-
 .logo {
   position: absolute;
   top: 30px;
   left: 30px;
-}
-
-
-.type-list {
-  margin: 0;
-  padding: 0;
-  margin-top: 145px;
-  margin-left: auto;
-  margin-right: 191px;
-}
-
-.type-list__item {
-  max-width: 403px;
-  list-style: none;
-  display: flex;
-  justify-content: flex-start;
-  align-items: flex-start;
-  margin-bottom: 50px;
-  &:last-child {
-    margin-bottom: 0;
-  }
-}
-
-.type-list__square {
-  min-width: 37px;
-  max-height: 30px;
-  font-style: normal;
-  font-weight: normal;
-  text-align: right;
-}
-
-.type-list__text {
-  font-style: normal;
-  font-weight: bold;
-  margin-left: 30px;
-}
-
-.type-list__text_size_h1 {
-  font-family: $quicksand;
-  font-size: 24px;
-  line-height: 30px;
-}
-
-.type-list__text_size_h2 {
-  font-family: $quicksand;
-  font-size: 19px;
-  line-height: 24px;
-  max-width: 282px;
-}
-
-.type-list__text_size_h3 {
-  font-size: 12px;
-  line-height: 15px;
-  text-transform: uppercase;
-}
-
-.type-list__text_size_body {
-  font-size: 14px;
-  line-height: 24px;
-  max-width: 301px;
-  font-weight: normal;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-.form-elements {
-  height: 1853px;
-  background-color: white;
-  &::before {
-    content: 'Form Elements';
-    position: absolute;
-    top: -20px;
-  }
 }
 
 .form-elements label {
@@ -143,78 +36,6 @@
 .focus {
   border: 1px solid $dark-50;
 }
-
-
-.comment {
-  width: 711px;
-  position: relative;
-  color: $dark-75;
-}
-
-.comment__avatar {
-  width: 47px;
-  height: 48px;
-  background: url("../../comment-profile.jpg") no-repeat 50% 25%;
-  position: absolute;
-}
-
-.comment__author,
-.comment__date,
-.comment__text {
-  padding-left: 58px;
-}
-
-.comment__author {
-  font-weight: bold;
-}
-
-.comment__like {
-  position: absolute;
-  top: 60px;
-  left: 4px;
-  width: 40px;
-  height: 20px;
-  background: 
-    url("../../comment-favorite.svg") no-repeat 25% 50%,
-    url("../../comment-count.svg") no-repeat 75% 50%,
-    url("../../comment-rect.svg") no-repeat 50% 50%;
-}
-
-.advantage {
-  position: relative;
-  max-width: 291px;
-}
-
-.advantage__logo {
-  position: absolute;
-  width: 48px;
-  height: 48px;
-}
-
-.advantage__title,
-.advantage__text {
-  padding-left: 58px;
-}
-
-.advantage__title {
-  font-weight: bold;
-}
-
-
-
-
-
-.headers-and-footers {
-  height: 1350px;
-  background-color: white;
-  &::before {
-    content: 'Headers & Footers';
-    position: absolute;
-    top: -20px;
-  }
-}
-
-
 
 .btn {
 	border: none;
@@ -251,8 +72,3 @@
 	color: #ffffff;
 	background-color: transparent;
 }
-
-
-
-
-
