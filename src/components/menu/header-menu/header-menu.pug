@@ -1,5 +1,0 @@
-mixin header-menu(options)
-  ul.header-menu
-    each option in options
-      li.header-menu__item(class= option.modifier ? 'header-menu__item_drop' : '')
-        a.header-menu__link(href='./ui-kit.html')= option.text
