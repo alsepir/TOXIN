@@ -74,3 +74,39 @@
   box-sizing: border-box;
   background: #FFFFFF;
 }
+
+//- header grid
+.header {
+	display: grid;
+  grid-template-columns: auto 110px 750px 300px auto;
+  grid-template-areas:
+    ". l m a .";
+	height: 70px;
+	max-width: 1440px;
+  margin: auto;
+  background-color: white;
+
+  &__logo {
+    grid-area: l;
+    display: flex;
+    align-items: center;
+  }
+
+  &__header-menu {
+    grid-area: m;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+
+  &__login {
+    grid-area: a;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+
+    & :nth-child(2) {
+      margin-left: 18px;
+    }
+  }
+}

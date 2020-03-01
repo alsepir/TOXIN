@@ -1,23 +1,26 @@
 //- header block
+include ./../button/button.pug
+include ./../menu/header-menu/header-menu.pug
+include ./../logo/logo.pug
+
+-
+  var data_button_login = {text: 'Login', fill: 'white'}
+  var data_button_register = {text: 'Register', fill: 'color'}
+  var data_menu = [
+    {text: 'Home', modifier: ''},
+    {text: 'About Us', modifier: ''},
+    {text: 'Services', modifier: 'drop'},
+    {text: 'Careers', modifier: ''},
+    {text: 'News', modifier: ''},
+    {text: 'Documentation', modifier: ''}]
+
 header.header
   .header__logo
+    +logo('./src/components/logo/Logo-grad.svg')
 
-  mixin nav-item(drop, item)
-    li.nav__item(class= drop)
-      a(href='ui-kit.html')= item
-  
-  block nav
-    .header__nav.nav
-      ul.nav__items
-        +nav-item('', 'О нас')
-        +nav-item('nav__items-drop', 'Услуги')
-        +nav-item('', 'Вакансии')
-        +nav-item('', 'Новости')
-        +nav-item('nav__items-drop', 'Соглашения')
+  .header__header-menu
+    +header-menu(data_menu)
 
   .header__login
-    button(type='button').btn
-      .btn__text.btn_fill_white Login
-    button(type='button').btn
-      .btn__text.btn_fill_color Register
-      
+    +button(data_button_login)
+    +button(data_button_register)

@@ -1,9 +1,12 @@
 //- base layout HTML
 extends base.pug
 
+block header
+  //- Очистка блока
+
 block content
   .colors-and-type.UIkit-page.flexible
-    img.logo(src='./src/logo.svg')
+    img.logo1(src='./src/logo.svg')
 
     include ./../components/list-items/list-items.pug
     //- component list-items view
@@ -75,7 +78,7 @@ block content
   
   //- form-elements page ----------------------------------------------------------
   .form-elements.UIkit-page
-    img.logo(src='./src/logo.svg')
+    img.logo1(src='./src/logo.svg')
 
     label(for='default') TEXT FIELD
     input(type='text' id='default' class='default' placeholder='Email')
@@ -130,5 +133,5 @@ block content
 
   //- headers-and-footers page ----------------------------------------------------------
   .headers-and-footers.UIkit-page
-    include ../components/header/header-en.pug
+    include ../components/header/header.pug
     include ../components/footer/footer-en.pug

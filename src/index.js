@@ -3,6 +3,10 @@
 
 import './assets/page-layout/index.scss';
 
+import './components/button/button.scss';
+import './components/menu/header-menu/header-menu.scss';
+
+import './components/logo/logo.scss'
 
 import "./assets/fontawesome/scss/brands.scss";
 import './components/header/header.scss';
@@ -12,4 +16,4 @@ import './image-3.png';
 
 
 import Logo from './logo.svg';
-import './Logo-grad.svg'
+import './components/logo/Logo-grad.svg'
