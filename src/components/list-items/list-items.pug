@@ -32,3 +32,12 @@ mixin font-list(options)
       li.font-list__item
         .font-list__tag(class= 'font-list__aside_' + option.modifier)= option.tag
         .font-list__aside(class= 'font-list__aside_' + option.modifier)= option.aside
+
+
+mixin relation-list(options)
+  .relation-list
+    h3.relation-list__title= options.title
+    ul.relation-list__items
+      each relation in options.relations
+        li
+          a.relation-list__item(href='#')= relation

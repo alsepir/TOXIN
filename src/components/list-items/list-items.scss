@@ -148,3 +148,22 @@
   margin-left: auto;
   margin-right: 191px;
 }
+
+
+.relation-list {
+  &__title {
+    text-transform: uppercase;
+    font-weight: bold;
+    margin-bottom: 21px;
+  }
+
+  &__items {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  &__item {
+    text-decoration: none;
+  }
+}
