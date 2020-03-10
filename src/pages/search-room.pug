@@ -4,6 +4,7 @@ extends base.pug
 block content
   include ../components/room-frame/room-frame.pug
   include ../components/checkbox-buttons/checkbox-buttons.pug
+  include ../components/expandable-checkbox-list/expandable-checkbox-list.pug
   
   -
     var data_room = [{
@@ -93,32 +94,85 @@ block content
       image: ['./src/components/room-frame/image/352.jpg']
     }]
 
-    var data_opportunities = [{
-      title: 'Можно курить',
-      description: '',
-      isActive: false
-    },
-    {
-      title: 'Можно с питомцами',
-      description: '',
-      isActive: true
-    },
-    {
-      title: 'Можно пригласить гостей (до 10 человек)',
-      description: '',
-      isActive: true
-    }]
+    var data_opportunities = {
+      head: 'Checkbox Buttons',
+      headIsButton: false,
+      items: [{
+        title: 'Можно курить',
+        description: '',
+        isActive: false
+      },
+      {
+        title: 'Можно с питомцами',
+        description: '',
+        isActive: true
+      },
+      {
+        title: 'Можно пригласить гостей (до 10 человек)',
+        description: '',
+        isActive: true
+      }]
+    }
   
-    var data_properties = [{
-      title: 'Широкий коридор',
-      description: 'Ширина коридоров в номере \n не менее 91 см.',
-      isActive: false
-    },
-    {
-      title: 'Помощник для инвалидов',
-      description: 'На 1 этаже вас встретит специалист \n и проводит до номера.',
-      isActive: false
-    }]
+    var data_properties = {
+      head: 'доступность',
+      headIsButton: false,
+      items: [{
+        title: 'Широкий коридор',
+        description: 'Ширина коридоров в номере \n не менее 91 см.',
+        isActive: false
+      },
+      {
+        title: 'Помощник для инвалидов',
+        description: 'На 1 этаже вас встретит специалист \n и проводит до номера.',
+        isActive: false
+      }]
+    }
+
+    var data_additionally = {
+      head: 'дополнительные удобства',
+      headIsButton: true,
+      items: [{
+        title: 'Завтрак',
+        description: '',
+        isActive: false
+      },
+      {
+        title: 'Письменный стол',
+        description: '',
+        isActive: false
+      },
+      {
+        title: 'Стул для кормления',
+        description: '',
+        isActive: false
+      },
+      {
+        title: 'Кроватка',
+        description: '',
+        isActive: false
+      },
+      {
+        title: 'Телевизор',
+        description: '',
+        isActive: false
+      },
+      {
+        title: 'Шампунь',
+        description: '',
+        isActive: false
+      },
+      {
+        title: 'Телевизор',
+        description: '',
+        isActive: false
+      },
+      {
+        title: 'Шампунь',
+        description: '',
+        isActive: false
+      }]
+    }
 
   .filter-room
     .filter-room__filter
@@ -128,8 +182,10 @@ block content
       label(for="guests") Гости
       input(id="guests")
 
-      +checkbox-buttons(data_opportunities)
-      +checkbox-buttons(data_properties)
+      +checkbox-list(data_opportunities)
+      +checkbox-list(data_properties)
+
+      +checkbox-list(data_additionally)
     .filter-room__result
       h2 Номера, которые мы для вас подобрали
       

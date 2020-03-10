@@ -1,0 +1,9 @@
+//include ../checkbox-buttons/checkbox
+
+mixin expandable-checkbox-list(options)
+  .expandable-checkbox-list
+    .expandable-checkbox-list__button #{options.title}
+    ul.expandable-checkbox-list__items
+      each addition in options.additions
+        li.expandable-checkbox-list__item
+          .title #{addition}

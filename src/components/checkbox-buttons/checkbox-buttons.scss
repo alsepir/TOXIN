@@ -1,36 +1,46 @@
-
 .checkbox-list {
-  list-style: none;
-  position: relative;
-  padding-left: 30px;
+  &__items {
+    list-style: none;
+    padding: 0;
+    margin: 0;
 
-  & .item {
-    position: absolute;
-    left: 0;
+    &_hide {
+      display: none;
+    }
+  }
+
+  &__item {
+    display: grid;
+    grid-template-columns: 30px 230px;
+    grid-template-areas: 
+      "b t"
+      ". d";
+  }
+
+  &__box {
+    grid-area: b;
     width: 20px;
     height: 20px;
     border: 1px solid rgba(31, 32, 65, 0.25);
     box-sizing: border-box;
     border-radius: 4px;
     background: #FFFFFF;
+  
+    &_active {
+      border-color: #BC9CFF;
+      background: url('Vector.svg') no-repeat 50% 45%;
+    }
   }
 
-  & .active {
-    border-color: #BC9CFF;
-    background: url('Vector.svg') no-repeat 50% 45%;
+  &__title {
+    grid-area: t;
+    max-width: 205px;
   }
 
-  & .title {
-    display: block;
-    width: 205px;
-  }
-
-  & .description {
-    width: 230px;
+  &__description {
+    grid-area: d;
     font-size: 12px;
     line-height: 14px;
     white-space: pre-line;
-  }
+  }  
 }
-
-

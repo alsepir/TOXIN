@@ -1,16 +1,17 @@
-
-mixin checkbox-buttons(options)
-  .checkbox-buttons
-    h3 Checkbox buttons
-    ul.checkbox-list
-      each box in options
-        li 
-          if box.isActive
-            .item.active
+mixin checkbox-list(options)
+  .checkbox-list
+    h3.checkbox-list__head(class= options.headIsButton ? 'checkbox-list__head_active' : '') #{options.head}
+    ul.checkbox-list__items
+      - var id = 0
+      each option in options.items
+        li(data-id= id++).checkbox-list__item
+          if option.isActive
+            .checkbox-list__box.checkbox-list__box_active
           else
-            .item
+            .checkbox-list__box
 
-          .title #{box.title}
+          .checkbox-list__title #{option.title}
 
-          if box.description
-            .description #{box.description}
+          if option.description
+            .checkbox-list__description #{option.description}
+          
