@@ -1,7 +1,8 @@
-import './assets/page-layout/filter-room.scss';
+// Собираем страницу
 
+// Подключение сетки страницы
+import './assets/page-layout/search-room.scss';
 
-import './components/expandable-checkbox-list/expandable-checkbox-list.scss';
-
+// Подключение используемых компонентов
 import './components/room-frame/slideshow.js';
-import './components/checkbox-buttons/checkbox-buttons.js';
+import './components/checkbox-list/checkbox-list.js';

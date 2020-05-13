@@ -1,4 +1,4 @@
-.filter-room {
+.search-room {
   display: grid;
   grid-template-columns: auto 320px 840px auto;
   grid-template-rows: auto;
@@ -10,14 +10,14 @@
   background-color: white;
 }
 
-.filter-room__filter {
+.search-room__filter {
   grid-area: f;
   label {
     display: block;
   }
 }
 
-.filter-room__result {
+.search-room__result {
   grid-area: r;
 }
 

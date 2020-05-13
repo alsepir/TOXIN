@@ -1,4 +1,4 @@
-import './checkbox-buttons.scss';
+import './checkbox-list.scss';
 
 class CheckboxList {
 	constructor(id, component) {
@@ -43,5 +43,3 @@ let checkboxLists = (function() {
 
 	return newListItems;
 })();
-
-console.log(checkboxLists);

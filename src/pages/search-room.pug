@@ -3,9 +3,9 @@ extends base.pug
 
 block content
   include ../components/room-frame/room-frame.pug
-  include ../components/checkbox-buttons/checkbox-buttons.pug
-  include ../components/expandable-checkbox-list/expandable-checkbox-list.pug
-  
+  include ../components/checkbox-list/checkbox-list.pug
+    
+  //- Данные для наполнения страницы
   -
     var data_room = [{
       number: 888,
@@ -174,8 +174,9 @@ block content
       }]
     }
 
-  .filter-room
-    .filter-room__filter
+  //- Макет страницы
+  .search-room
+    .search-room__filter
       label(for="come") Даты пребывания в отеле
       input(id="come")
 
@@ -184,9 +185,9 @@ block content
 
       +checkbox-list(data_opportunities)
       +checkbox-list(data_properties)
-
       +checkbox-list(data_additionally)
-    .filter-room__result
+
+    .search-room__result
       h2 Номера, которые мы для вас подобрали
       
       .layout-room-box
