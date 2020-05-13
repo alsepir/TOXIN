@@ -1,4 +1,23 @@
 .checkbox-list {
+  &__head {
+    font-weight: bold;
+    text-transform: uppercase;
+
+    &_active {
+      position: relative;
+
+      &::before {
+        position: absolute;
+        right: 50px;
+        font-family: 'Material Icons';
+        text-transform: none;
+        font-size: 24px;
+        color: rgba(31, 32, 65, 0.5);
+        content: 'expand_more';
+      }
+    }
+  }
+
   &__items {
     list-style: none;
     padding: 0;
