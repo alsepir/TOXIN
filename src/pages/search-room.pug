@@ -4,6 +4,7 @@ extends base.pug
 block content
   include ../components/room-frame/room-frame.pug
   include ../components/checkbox-list/checkbox-list.pug
+  include ../components/pagination/pagination.pug
     
   //- Данные для наполнения страницы
   -
@@ -174,6 +175,12 @@ block content
       }]
     }
 
+    var data_pagination = {
+      itemActive: 1,
+      quantityItems: 15,
+      description: '1 – 12 из 100+ вариантов аренды'
+    }
+
   //- Макет страницы
   .search-room
     .search-room__filter
@@ -193,4 +200,8 @@ block content
       .layout-room-box
         each room in data_room
           +room-frame(room)
+
+      +pagination(data_pagination)
+
+
             

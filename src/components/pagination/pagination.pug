@@ -1,0 +1,27 @@
+mixin pagination(options)
+  .pagination
+    if options.itemActive == 1
+      - var prev = 1
+    else
+      - var prev = options.itemActive - 1
+    
+    if options.quantityItems > 5
+      ul.pagination__items
+        - for(var i = prev; i < prev+3; i++)
+          - var isActive = false
+          if i == options.itemActive
+            - isActive = true
+            
+          li.pagination__item(class= isActive ? 'pagination__item_active' : '')
+            a(href='#').pagination__link #{i}
+
+        li.pagination__item
+          a(href='#').pagination__link ...
+        
+        li.pagination__item
+          a(href='#').pagination__link #{options.quantityItems}
+        
+        li.pagination__item.pagination__item_next
+          a(href='#').pagination__link.pagination__arrow
+
+    .pagination__description #{options.description}

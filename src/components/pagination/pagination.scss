@@ -1,0 +1,48 @@
+.pagination {
+  &__items {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin: 0px;
+    margin-bottom: 20px;
+    padding: 0px;
+  }
+
+  &__item {
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 50%;
+    color: black;
+
+    &_active {
+      background-color: purple;
+      color: white;
+    }
+
+    &_next {
+      background-color: aquamarine;
+      color: white;
+    }
+  }
+
+  &__link {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  &__arrow::before {
+      display: flex;
+      justify-content: center;
+      font-family: 'Material Icons';
+      content: 'arrow_forward';
+      font-size: 24px;
+      color: white;
+  }
+
+  &__description {
+    display: flex;
+    justify-content: center;
+  }
+}
