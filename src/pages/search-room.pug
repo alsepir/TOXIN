@@ -5,6 +5,7 @@ block content
   include ../components/room-frame/room-frame.pug
   include ../components/checkbox-list/checkbox-list.pug
   include ../components/pagination/pagination.pug
+  include ../components/range-slider/range-slider.pug
     
   //- Данные для наполнения страницы
   -
@@ -181,6 +182,11 @@ block content
       description: '1 – 12 из 100+ вариантов аренды'
     }
 
+    var data_slider = {
+      head: 'Диапазон цены',
+      addition: 'Стоимость за сутки пребывания в номере'
+    }
+
   //- Макет страницы
   .search-room
     .search-room__filter
@@ -189,6 +195,8 @@ block content
 
       label(for="guests") Гости
       input(id="guests")
+
+      +range-slider(data_slider)
 
       +checkbox-list(data_opportunities)
       +checkbox-list(data_properties)

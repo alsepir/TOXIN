@@ -1,0 +1,35 @@
+@import "slider.css";
+@import "theme.css";
+
+.range-slider {
+  display: grid;
+  grid-template-areas: 
+    "head       amount"
+    "movement   movement"
+    "addition   addition";
+  grid-template-rows: 40px 20px 20px;
+  width: 266px;
+
+  &__head {
+    grid-area: head;
+    font-weight: bold;
+  }  
+
+  &__amount{
+    grid-area: amount;
+    vertical-align: middle;
+    line-height: 40px;
+    text-align: end;
+  }
+
+  &__movement {
+    grid-area: movement;
+  }
+
+  &__addition {
+    grid-area: addition;
+    font-size: 12px;
+    line-height: 14px;
+    color: rgba(31, 32, 65, 0.5);
+  }
+}

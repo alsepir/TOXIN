@@ -1,0 +1,30 @@
+
+.ui-custom-handle.ui-state-active {
+  opacity: 0.8;
+}
+
+.ui-custom-handle.ui-state-focus {
+  outline: none;
+}
+
+.ui-custom-slider {
+  width: 266px;
+  height: 6px;
+  background: #FFFFFF;
+  border: 1px solid rgba(31, 32, 65, 0.25);
+	box-sizing: border-box;
+  border-radius: 3px;
+}
+
+.ui-custom-handle {
+  width: 12px;
+  height: 12px;
+	border: 2px solid #FFFFFF;
+  background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
+  border-radius: 10px;
+}
+
+.ui-custom-header {
+  border-radius: 3px;
+	background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
+}

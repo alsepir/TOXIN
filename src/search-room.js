@@ -7,3 +7,4 @@ import './assets/page-layout/search-room.scss';
 import './components/room-frame/slideshow.js';
 import './components/checkbox-list/checkbox-list.js';
 import './components/pagination/pagination.js'
+import './components/range-slider/range-slider.js'
