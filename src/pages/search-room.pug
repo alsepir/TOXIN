@@ -6,6 +6,7 @@ block content
   include ../components/checkbox-list/checkbox-list.pug
   include ../components/pagination/pagination.pug
   include ../components/range-slider/range-slider.pug
+  include ../components/dropdown/dropdown.pug
     
   //- Данные для наполнения страницы
   -
@@ -195,6 +196,8 @@ block content
 
       label(for="guests") Гости
       input(id="guests")
+
+      +dropdown()
 
       +range-slider(data_slider)
 

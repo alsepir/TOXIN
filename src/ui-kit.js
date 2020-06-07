@@ -7,20 +7,3 @@ import City from './components/list-items/advantage-city.svg';
 import './components/list-items/list-items.scss'
 
 import './components/comment/comment.scss';
-
-import './jquery-plugin.js'
-
-
-$(".test").css("background", "yellow");
-$(".test").datepicker();
-$('#speed').selectmenu();
-
-$( "#speed" ).selectmenu( "open" );
-let speed = $( "#speed" ).selectmenu( "menuWidget" );
-console.log(speed);
-
-function component() {
-  const element = document.createElement('div');
-  element.classList.add('square');
-  return element;
-}
